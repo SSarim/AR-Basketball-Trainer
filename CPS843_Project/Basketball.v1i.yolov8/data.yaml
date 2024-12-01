@@ -1,0 +1,13 @@
+train: /Users/labeeba/Desktop/CPS843_Project/Basketball.v1i.yolov8/train/images
+val: /Users/labeeba/Desktop/CPS843_Project/Basketball.v1i.yolov8/valid/images
+test: /Users/labeeba/Desktop/CPS843_Project/Basketball.v1i.yolov8/test/images  # Optional
+
+nc: 3
+names: ['basketball', 'rim', 'sports ball']
+
+roboflow:
+  workspace: eagle-eye
+  project: basketball-1zhpe
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/eagle-eye/basketball-1zhpe/dataset/1
