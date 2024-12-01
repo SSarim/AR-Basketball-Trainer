@@ -165,7 +165,7 @@ def display_performance_analysis(text_file_path):
                 text=line.strip(),
                 position=(70, y_offset),
                 font=cv2.FONT_HERSHEY_SIMPLEX,
-                font_scale=0.65,
+                font_scale=0.5,
                 text_color=(0, 0, 0),
                 background_color=(255, 255, 255),
                 padding=0,

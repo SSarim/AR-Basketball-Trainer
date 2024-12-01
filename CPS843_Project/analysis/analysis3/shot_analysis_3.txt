@@ -1,0 +1,24 @@
+Shot Analysis Results
+=======================
+Shot 1:
+  Min Knee Angle: 113 (Good Form)
+  Min Elbow Angle: 42 (Bad Form)
+  Min Wrist Angle: 47 (Good Form)
+
+Shot 2:
+  Min Knee Angle: 121 (Bad Form)
+  Min Elbow Angle: 38 (Bad Form)
+  Min Wrist Angle: 51 (Good Form)
+
+Shot 3:
+  Min Knee Angle: 122 (Bad Form)
+  Min Elbow Angle: 39 (Bad Form)
+  Min Wrist Angle: 50 (Good Form)
+
+Total Shots: 3
+
+Average Angles
+=======================
+Average Knee Angle: 119
+Average Elbow Angle: 40
+Average Wrist Angle: 49
