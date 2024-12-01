@@ -187,8 +187,15 @@ def analyze_video(main_output_dir="analysis", model_weights="runs/detect/train3/
         if not ret:
             break
 
-        # Get frame dimensions
-        h, w, _ = frame.shape
+        # Define fixed dimensions
+        fixed_width = 1280  # Set your desired width
+        fixed_height = 720  # Set your desired height
+
+        # Resize the frame to fixed dimensions
+        frame = cv2.resize(frame, (fixed_width, fixed_height))
+
+        # Set h and w to the fixed dimensions
+        h, w = fixed_height, fixed_width
 
         # Convert the image to RGB
         image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -237,8 +244,7 @@ def analyze_video(main_output_dir="analysis", model_weights="runs/detect/train3/
                         if not tracking_ball:
                             tracking_ball = True
                             trajectory_points = []  # Start tracking for a new shot
-                        trajectory_points.append(
-                            (shot_count, ball_position[0], ball_position[1]))  # Include shot number
+                        trajectory_points.append((shot_count, ball_position[0], ball_position[1]))  # Include shot number
 
                     if tracking_ball and rim_position:
                         distance_to_rim = math.sqrt((ball_position[0] - rim_position[0]) ** 2 +
@@ -257,13 +263,13 @@ def analyze_video(main_output_dir="analysis", model_weights="runs/detect/train3/
                         # Extract (x, y) from trajectory_points
                         prev_point = (
                             trajectory_points[i - 1][1], trajectory_points[i - 1][2])  # (x, y) of the previous point
-                        current_point = (
-                            trajectory_points[i][1], trajectory_points[i][2])  # (x, y) of the current point
+                        current_point = (trajectory_points[i][1], trajectory_points[i][2])  # (x, y) of the current point
                         cv2.line(frame, prev_point, current_point, (0, 255, 255), 2)  # Yellow line
 
                 # Reset trajectory points for the next shot
-                if current_phase == "Getting Ready to Shoot" and not has_shot:
+                if current_phase == "Ready to Shoot" and not has_shot:
                     trajectory_points = []
+
 
             # Show ball position with a dot
             if ball_position:

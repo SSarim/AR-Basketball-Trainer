@@ -135,7 +135,7 @@ def display_performance_analysis(text_file_path):
         f"Complete analysis can be accessed at: {analysis_folder}",
         (50, 970),  # Adjust position
         cv2.FONT_HERSHEY_SIMPLEX,
-        0.6,  # Font scale
+        0.4,  # Font scale
         (0, 0, 0),  # Black text color
         1,  # Thickness
         cv2.LINE_AA
