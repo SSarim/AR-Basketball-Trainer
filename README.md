@@ -1,42 +1,57 @@
+# 🏀 Basketball AR Performance Tracker
 
-# Basketball AR Performance Tracker 🏀
-
-This project utilizes AI/ML, YOLOv8, Mediapipe, Numpy, and OpenCV for basketball trajectory tracking and angle detection. Follow the steps below to set up and run the program.
+Leverage the power of **AI/ML**, **YOLOv8**, **MediaPipe**, **NumPy**, and **OpenCV** to analyze basketball shots through real-time trajectory tracking and angle detection.
 
 ---
 
-## Setup and Installation
+## 🚀 Features
 
-### Prerequisites
-- Python 3.10
-- PyCharm IDE (recommended)
-- YOLOv8 Pretrained Model (`best.pt`)
+- 🎯 Real-time basketball shot detection and tracking  
+- 📐 Angle and trajectory analysis  
+- 🤖 YOLOv8-based player and ball detection  
+- 📊 Output statistics and visualizations  
 
+---
 
-## Installation Steps
-### 1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/m00nchi1d/CPS843-Final-Project.git
-   ```
-### 2. **Open the Project**
-   - Open the project folder in PyCharm IDE.
-   - Open the project main folder using the following command:
-   ```bash
-   cd CPS843_Project
-   ```
+## 📦 Setup & Installation
 
-### 3. **Configure Python Interpreter**
-   - Select `File` in the upper left corner.
-   - Choose `Settings` > `Project: CPS843_Project` > `Python Interpreter`.
-   - Click `Add Interpreter` and choose `Python 3.10 (Virtual Environment)` in the Base Interpreter section.
-   - Click `Apply` and `OK` to finalize the interpreter setup.
+### ✅ Prerequisites
 
-###  Create and Activate a Virtual Environment (ONLY If the interpreter does not create it automatically)
-Run the following commands in your terminal:
+- Python 3.10  
+- PyCharm IDE (recommended)  
+- YOLOv8 pretrained model (`best.pt`)  
+
+---
+
+### 🔧 Installation Steps
+
+#### 1. Clone the Repository
+
 ```bash
-python -m venv venv   # Create a virtual environment
+git clone https://github.com/m00nchi1d/CPS843-Final-Project.git
+cd CPS843-Final-Project/CPS843_Project
 ```
-Then, activate the environment:
+
+#### 2. Open the Project in PyCharm
+
+- Open the `CPS843_Project` folder in PyCharm.
+
+#### 3. Configure Python Interpreter
+
+- Navigate to `File > Settings > Project: CPS843_Project > Python Interpreter`
+- Add a new interpreter using **Python 3.10 (Virtual Environment)**
+- Apply changes and confirm
+
+#### 4. (Optional) Manually Create a Virtual Environment
+
+If not created automatically:
+
+```bash
+python -m venv venv
+```
+
+Activate the environment:
+
 - **Windows:**
   ```bash
   .\venv\Scripts\activate
@@ -46,86 +61,93 @@ Then, activate the environment:
   source venv/bin/activate
   ```
 
-### 4. **Install Requirements**
-   - Run the following command in your terminal to install the necessary dependencies:
-     ```bash
-     pip install -r requirements.txt
-     ```
+#### 5. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## How to Run the Program
+## ▶️ Running the Program
 
-### 1. Upload a Video File
-- Place your video file in the `CPS843_Project/Video` directory.
-- Supported formats include `.mp4`, `.mov`, and more.
+### 1. Add Your Video
 
-### 2. Edit the Detection File
-- Open the `analysis.py` file.
-- Edit the following line of code, on line 153:
-  ```python
-  cap = cv2.VideoCapture('Video/[VIDEO_NAME].[format]')
-  ```
-  Replace `[VIDEO_NAME]` with the name of your uploaded video file and `[format]` with the file format.
+Place your basketball video in the `Video/` directory.  
+Supported formats: `.mp4`, `.mov`, etc.
 
-### 3. Run the Detection Program
-- Run the following command in your terminal:
-  ```bash
-  python main.py
-  ```
+### 2. Configure the Detection Script
 
-### 4. View the Results
-- The video will be displayed live on the screen.
-- At the end of processing, the results and statistics will be displayed and saved to:
+Open `analysis.py`, go to **line 153**, and update this line:
+
+```python
+cap = cv2.VideoCapture('Video/[VIDEO_NAME].[format]')
+```
+
+Replace `[VIDEO_NAME]` and `[format]` accordingly.
+
+### 3. Start the Program
+
+Run the program via:
+
+```bash
+python main.py
+```
+
+### 4. View Results
+
+- The video with AR overlays will appear on screen
+- Output files (results/statistics) are saved to:  
   ```
   CPS843_Project/analysis
   ```
+
 ---
 
-## **Directory Structure**
+## 📁 Project Structure
+
 ```
 CPS843-Final-Project/
 ├── CPS843_Project/
-│   ├── analysis/                # Output directory for processed videos
-│   ├── Basketball.v1i.yolov8    # Yolov8 Files
-│   ├── runs/                    # Yolov8 Files
-│   ├── Video/                   # Directory for uploading input videos
-│   ├── analysis.py              # Main detection script
-│   ├── gui.py                   # GUI script  
-│   ├── main.py                  # Main run script       
-│   ├── requirements.txt         # List of dependencies
-└── README.md                    # This README file 
+│   ├── analysis/                # Output data
+│   ├── Basketball.v1i.yolov8    # YOLOv8 models
+│   ├── runs/                    # YOLOv8 runs
+│   ├── Video/                   # Input video files
+│   ├── analysis.py              # Trajectory and angle detection
+│   ├── gui.py                   # GUI interface (optional)
+│   ├── main.py                  # Entry point
+│   ├── requirements.txt         # Dependencies list
+└── README.md                    # Project overview
 ```
 
 ---
-## Contribution Guidelines
-Contributions are welcome! If you'd like to contribute, please:
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Open a pull request.
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+1. Fork the repo  
+2. Create a feature branch  
+3. Commit your changes  
+4. Open a pull request  
 
 ---
 
-## Contact
-For inquiries or support, please reach out to:
-- **Project Maintainer:** m00nchi1d 
-  [GitHub](https://github.com/m00nchi1d)
-- **Project Maintainer:**  SSarim
-  [GitHub](https://github.com/SSarim)
-- **Project Maintainer:**  shaheryar-abid 
-  [GitHub](https://github.com/shaheryar-abid)
-- **Project Maintainer:**  p89singh 
-  [GitHub](https://github.com/p89singh)
-- **Project Maintainer:**  nsidq 
-  [GitHub](https://github.com/nsidq)
+## 📬 Contact & Credits
 
----
-## **License**
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+Maintainers:  
+- [m00nchi1d](https://github.com/m00nchi1d)  
+- [SSarim](https://github.com/SSarim)  
+- [shaheryar-abid](https://github.com/shaheryar-abid)  
+- [p89singh](https://github.com/p89singh)  
+- [nsidq](https://github.com/nsidq)  
 
 ---
 
-Analyze and enhance your basketball performance with AR and AI-driven insights! 🏀
+## 📄 License
 
+This project is licensed under the **MIT License**. See `LICENSE` for details.
 
+---
+
+🏀 _Transform your basketball game with intelligent, real-time AR analytics._
